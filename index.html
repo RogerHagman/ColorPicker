@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .selected-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+        }
+    </style>
+    
+    <meta charset="UTF-8">
+    <title>Interactive Color Picker</title>
+    <style>
+        #color-picker {
+            cursor: crosshair;
+            border: 2px solid #000;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
+        }
+        #selected-colors {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .color-display {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            vertical-align: top;
+        }
+        .color-indicator {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+            margin-bottom: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .copy-button {
+            margin-top: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .color-label {
+            display: block;
+            margin-top: 5px;
+        }
+        .color-style-button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #color-swatches {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="color-picker" width="300" height="300"></canvas>
+    <div id="controls">
+        <button class="color-style-button" id="analogous-button">Analogous</button>
+        <button class="color-style-button" id="triadic-button">Triadic</button>
+    </div>
+    <div id="selected-colors">
+        <div id="color-swatches">
+            <div class="color-display">
+                <div class="color-indicator" id="color-indicator-1"></div>
+                <span class="color-label">Related Color 1</span>
+                <span id="color-hex-1">#FFFFFF</span><br>
+                <button class="copy-button" data-color-id="1">Copy Hex Code</button>
+            </div>
+            <div class="color-display">
+                <div class="color-indicator" id="color-indicator-2"></div>
+                <span class="color-label">Selected Color</span>
+                <span id="color-hex-2">#FFFFFF</span><br>
+                <button class="copy-button" data-color-id="2">Copy Hex Code</button>
+            </div>
+            <div class="color-display">
+                <div class="color-indicator" id="color-indicator-3"></div>
+                <span class="color-label">Related Color 2</span>
+                <span id="color-hex-3">#FFFFFF</span><br>
+                <button class="copy-button" data-color-id="3">Copy Hex Code</button>
+            </div>
+        </div>
+    </div>
+    <script src="colorpicker.js"></script>
+</body>
+</html>
